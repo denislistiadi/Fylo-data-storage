@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#contents {
+    z-index: 1;
+    margin-top: 35px;
+    
+}
+
+.content {
+    background-color: hsl(228, 56%, 26%);
+    padding: 30px;
+    vertical-align: bottom;
+    display: inline-block;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.45);
+}
+
+#leftcontent {
+    margin-right: 20px;
+    padding-right: 100px;
+    border-radius: 10px 80px 10px 10px;
+}
+
+#logo {
+    width: 120px;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: hsl(229, 57%, 11%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    vertical-align: top;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.icons:first-of-type {
+    margin-left: 0;
+}
+
+#rightcontent {
+    height: 70px;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#info {
+    color: hsl(229, 7%, 55%);
+    line-height: 0px;
+    margin-top: 5px;
+}
+
+#rightcontent span {
+    color: #fff;
+    font-weight: 700;
+}
+
+#bar {
+    margin-top: 20px;
+    background-color: hsl(229, 54%, 18%);
+    width: 450px;
+    height: 15px;
+    border-radius: 10px;
+    border: 3px solid hsl(229, 54%, 18%);
+    position: relative;
+}
+
+#fillbar {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+#ballbar {
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 100%;
+    top: 1px;
+    right: calc(20% + 2px );
+}
+
+.limit {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#usagemin {
+    margin-top: 10px;
+}
+#usagemax {
+    position: absolute;
+    margin: 0px auto;
+    right: 30px;
+    bottom: 25px;
+}
+
+#usageused {
+    position: absolute;
+    background-color: #fff;
+    color: hsl(229, 7%, 55%);
+    right: 30px;
+    top: -40px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 10px 10px 0 10px;
+}
+
+#usageused::before {
+    content: "";
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+#usageused p {
+    display: inline-block;
+    margin: 0;
+}
+
+#usagenumber {
+    color: hsl(229, 57%, 11%);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#background {
+    background-image: url("images/bg-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 50vh;
+}
+
+.attribution { 
+    z-index: 1;
+    position: absolute;
+    font-size: 13px;
+    text-align: center; 
+    bottom: 15px;
+    color: #fff;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 890px) {
+    #background {
+        background-image: url("images/bg-mobile.png");
+        background-size: cover;
+        height: 100%;
+        top: 0;
+    }
+    #contents {
+        width: calc(100%-40px);
+    }
+
+    .content {
+        display: block;
+        margin: auto;
+    }
+
+    #leftcontent {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    #logo {
+        height: 35px;
+    }
+
+    #info {
+        text-align: center;
+    }
+
+    #bar {
+        width: 100%;
+    }
+
+    #usagemax {
+        right: 25px;
+        bottom: 30px;
+    }
+
+    #usageused {
+        right: unset;
+        top: unset;
+        left: 25%;
+        border-radius: 10px;
+        
+    }
+
+    #usageused::before {
+        display: none;
+    }
+}
