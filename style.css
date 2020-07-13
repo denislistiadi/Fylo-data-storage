@@ -125,12 +125,14 @@ button {
 }
 
 #usageused {
+    display: flex;
+    align-items: center;
     position: absolute;
     background-color: #fff;
     color: hsl(229, 7%, 55%);
     right: 30px;
     top: -40px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     padding: 15px 20px;
     margin: 0;
